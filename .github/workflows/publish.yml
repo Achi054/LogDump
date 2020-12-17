@@ -2,7 +2,7 @@ name: LogDump Publish
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: windows-latest
