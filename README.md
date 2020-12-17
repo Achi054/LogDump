@@ -1,6 +1,6 @@
 # LogDump
 
-**LogDump** is a .net utility to serialize C# object to treeview nodes.<br/>
+**LogDump** is a .Net utility to serialize C# object to treeview nodes.<br/>
 The dump object can also be used for structured logging for better visualization.
 
 ## Download and Install
