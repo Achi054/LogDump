@@ -85,7 +85,7 @@ account.Dump(x =>
 
 ## Detailed build status
 
-| Branch | Build Status                                                                                                       |
-| ------ | ------------------------------------------------------------------------------------------------------------------ |
-| dev    | ![GitHub Action Build](https://github.com/Achi054/JsonT/workflows/GitHub%20Action%20Build/badge.svg?branch=dev)    |
-| master | ![GitHub Action Build](https://github.com/Achi054/JsonT/workflows/GitHub%20Action%20Build/badge.svg?branch=master) |
+| Branch  | Build Status                                                                                            |
+| ------- | ------------------------------------------------------------------------------------------------------- |
+| develop | ![LogDump Build](https://github.com/Achi054/LogDump/workflows/LogDump%20Build/badge.svg?branch=develop) |
+| main    | ![LogDump Build](https://github.com/Achi054/LogDump/workflows/LogDump%20Build/badge.svg?branch=main)    |
