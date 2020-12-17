@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-net-core-sdk
         with:
           dotnet-version: 5.0.1
 
