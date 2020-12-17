@@ -1,0 +1,43 @@
+name: LogDump Publish
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.1
+
+      - name: Setup MSBuild Path
+        uses: warrenbuckley/Setup-MSBuild@v1
+
+      - name: Install dependencies
+        working-directory: ./src
+        run: dotnet restore
+
+      - name: Build
+        working-directory: ./src
+        run: dotnet build --configuration Release
+  deploy:
+    name: list on nuget
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - name: Pack
+        working-directory: ./src
+        run: dotnet pack --configuration Release
+
+      - name: Push
+        working-directory: ./src
+        run: dotnet nuget push nupkg\*.nupkg -k oy2p4kltjf2riofak7kqr5ngkhzoi22uli6hnwryfxrqru -s https://api.nuget.org/v3/index.json --no-symbols true

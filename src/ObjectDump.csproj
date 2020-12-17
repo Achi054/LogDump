@@ -2,6 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>LogDump</PackageId>
+    <Authors>Sujith Acharya</Authors>
+    <Company />
+    <Product>LogDump</Product>
+    <Description>LogDump is a .Net utility to serialize C# object to treeview nodes.
+The dump object can also be used for structured logging for better visualization.</Description>
+    <PackageIcon>Titan.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Achi054/LogDump</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets\Titan.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
